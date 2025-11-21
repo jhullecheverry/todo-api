@@ -1,0 +1,32 @@
+
+POST http://127.0.0.1:8000/users/
+Content-Type: application/json
+
+{
+  "name": "Manual",
+  "email": "manual@example.com"
+}
+
+### Create task
+POST http://127.0.0.1:8000/tasks/
+Content-Type: application/json
+
+{
+  "title": "Manual task",
+  "description": "from http file",
+  "user_id": 1
+}
+
+### List tasks for user
+GET http://127.0.0.1:8000/tasks/user/1
+
+### Update status
+PUT http://127.0.0.1:8000/tasks/1/status
+Content-Type: application/json
+
+{
+  "is_completed": true
+}
+
+### Delete task
+DELETE http://127.0.0.1:8000/tasks/1
