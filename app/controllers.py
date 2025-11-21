@@ -10,7 +10,6 @@ from app import services
 router = APIRouter()
 
 
-# --- Schemas ---
 class UserCreate(BaseModel):
     name: str
     email: str
